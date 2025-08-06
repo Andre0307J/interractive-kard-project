@@ -47,7 +47,7 @@ Complete State desktop View
 ![Complete State In Desktop View](screenshots/complete-state-desktop.png)
 
 
-Complete State Mobile View
+Complete State In Mobile View
 ![Complete State In Mobile View](screenshots/complete-state-mobile.png)
 
 
