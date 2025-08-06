@@ -1,6 +1,6 @@
 # Frontend Mentor - Interactive card details form solution
 
-This is a solution to the [Interactive card details form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Interactive card details form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw). Frontend Mentor challenges help one improve one's coding skills by building realistic projects. 
 
 ## Table of contents
 
@@ -31,14 +31,23 @@ Users should be able to:
 
 ### Screenshot
 
+Destop View
 ![Desktop view](screenshots/desktop-design.png)
 
+
+Mobile View
 ![Mobile View](screenshots/mobile-design.png)
 
+
+Active State View
 ![When in active state](screenshots/active-state.png)
 
+
+Complete State desktop View
 ![Complete State In Desktop View](screenshots/complete-state-desktop.png)
 
+
+Complete State Mobile View
 ![Complete State In Mobile View](screenshots/complete-state-mobile.png)
 
 
