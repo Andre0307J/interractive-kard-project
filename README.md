@@ -32,22 +32,27 @@ Users should be able to:
 ### Screenshot
 
 Destop View
+
 ![Desktop view](screenshots/desktop-design.png)
 
 
 Mobile View
+
 ![Mobile View](screenshots/mobile-design.png)
 
 
 Active State View
+
 ![When in active state](screenshots/active-state.png)
 
 
 Complete State desktop View
+
 ![Complete State In Desktop View](screenshots/complete-state-desktop.png)
 
 
 Complete State In Mobile View
+
 ![Complete State In Mobile View](screenshots/complete-state-mobile.png)
 
 
@@ -306,7 +311,7 @@ Going forward, I'd like to continue focusing on improving my CSS skills especial
 
 ## Author
 
-- Name: [Ozomma Chukwuemeka Andre], an aspiring frontend developer.
+- Name: Ozomma Chukwuemeka Andre, an aspiring frontend developer.
 
 ## Acknowledgments
 
