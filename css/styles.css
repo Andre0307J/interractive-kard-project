@@ -1,0 +1,361 @@
+body {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  background: hsl(270, 3%, 87%);
+  color: hsl(278, 68%, 11%);
+  overflow-x: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  min-height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.left-column {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: visible;
+}
+
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.cards {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  margin-right: -120px; /* This will make the cards overlap into the right column */
+}
+
+.card-front {
+  position: absolute;
+  top: -70px;
+  left: 2.5rem;
+  width: 370px;
+  z-index: 2;
+}
+
+.card-logo {
+  width: 50px;
+  height: auto;
+  margin-bottom: 3rem;
+}
+
+.card-front-info {
+  position: absolute;
+  top: -20px; 
+  left: 4rem;
+  width: 320px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.card-number {
+  font-size: 22px;
+  color: #fff;
+  letter-spacing: 5px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+}
+
+.card-name,
+.card-expiry {
+  font-size: 14px;
+  color: #fff;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.card-expiry {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.card-back {
+  position: absolute;
+  top: 160px;
+  left: 100px;
+  width: 380px;
+  z-index: 2;
+}
+
+.card-back-info {
+  position: absolute;
+  top: 250px;
+  left: 400px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.card-cvc {
+  font-size: 14px;
+  color: #fff;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.right-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(0, 100%, 100%);
+}
+
+.card-form {
+  width: 480px;
+  padding: 2rem;
+  background: hsl(0, 100%, 100%);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-left: 3rem;
+}
+
+.card-form label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 0.1rem;
+  color: hsl(278, 68%, 11%);
+  letter-spacing: 1px;
+  margin-bottom: 0px;
+}
+
+.card-form input {
+  width: 100%;
+  padding: 0.75rem 0.15rem 0.75rem 0.5rem;
+  font-size: 18px;
+  font-family: inherit;
+  font-weight: 500;
+  border: 1px solid hsl(270, 3%, 87%);
+  border-radius: 8px;
+  background: hsl(0, 100%, 100%);
+  color: hsl(278, 68%, 11%);
+  outline: none;
+  transition: border 0.2s;
+  margin-bottom: 1px;
+}
+
+.card-form input:focus {
+  border: 1.5px solid;
+  border-image: linear-gradient(90deg, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) 1;
+}
+
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.form-row > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Error styles for later JS validation */
+.card-form input.error {
+  border-color: hsl(0, 100%, 66%);
+}
+
+.complete-state {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: hsl(0, 100%, 100%);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.complete-icon {
+  width: 60px;
+  margin-bottom: 1rem;
+}
+
+.complete-state h2 {
+  font-size: 2rem;
+  color: hsl(278, 68%, 11%);
+  margin: 0;
+}
+
+.complete-state p {
+  font-size: 18px;
+  color: hsl(212, 12%, 71%);
+  margin: 0;
+}
+
+.continue-btn {
+  padding: 1rem 2rem;
+  font-size: 18px;
+  font-family: inherit;
+  font-weight: 500;
+  background: linear-gradient(90deg, hsl(278, 94%, 20%));
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.confirm-btn {
+  padding: 1rem;
+  font-size: 18px;
+  font-family: inherit;
+  font-weight: 500;
+  background: linear-gradient(90deg, hsl(278, 94%, 20%));
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.confirm-btn:enabled {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.error-message {
+  color: hsl(0, 100%, 66%);
+  font-size: 12px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: block;
+  min-height: 18px;
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+    height: auto;
+  }
+
+  .left-column {
+    justify-content: flex-start;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    position: relative;
+    height: 280px;
+  }
+
+  .background-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .cards {
+    width: 350px;
+    height: 250px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .card-logo {
+    width: 40px;
+    height: auto;
+    margin: 0;
+    position: absolute;
+    top: -4rem; 
+    left: 0.3rem;
+    z-index: 4;
+  }
+
+  .card-front {
+    width: 330px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    top: 120px;
+  }
+
+  .card-front-info {
+    position: absolute;
+    top: 230px;
+    left: 1.5rem;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card-number {
+    font-size: 18px;
+  }
+
+  .card-name,
+  .card-expiry {
+    font-size: 12px;
+  }
+
+  .card-back {
+    width: 320px;
+    position: absolute;
+    top: -10px;
+    left: 40px;
+    right: 0;
+    z-index: 1;
+  }
+
+  .card-back-info {
+    top: 68px;
+    left: 280px;
+    font-size: 12px;
+    position: absolute;
+    z-index: 3;
+  }
+
+  .right-column {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    margin-top: 0.1rem;
+    background-color: hsl(0, 100%, 100%);
+  }
+
+  .card-form {
+    width: 100%;
+    max-width: 360px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    background-color: hsl(0, 100%, 100%);
+    z-index: 5;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    width: calc(100% - 2rem);
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
