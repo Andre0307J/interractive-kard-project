@@ -72,6 +72,7 @@ Throughout the project, I referred to documentation and online resources to solv
 ### Built with
 
 - Semantic HTML5 markup
+- Pure CSS (no frameworks)
 - CSS custom properties
 - Flexbox
 - CSS Grid
