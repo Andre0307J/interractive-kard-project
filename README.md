@@ -58,7 +58,7 @@ Complete State In Mobile View
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Gthub repository URL](https://github.com/Andre0307J/interractive-kard-project)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
